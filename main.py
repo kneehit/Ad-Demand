@@ -13,7 +13,7 @@ import cv2
 import os
 import googletrans
 import glob
-os.chdir('/home/kneehit/Data Science/Avito Ad Demand/Avito')
+#os.chdir('/home/kneehit/Data Science/Avito Ad Demand/Avito')
 
 
 
