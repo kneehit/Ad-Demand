@@ -5,4 +5,4 @@ Dataset: https://www.kaggle.com/c/avito-demand-prediction
 
 
 
-Work in Progress - (Currently working on Data Visualization)
+Work in Progress - (Currently working on Data Visualization and Web Scrapping)
