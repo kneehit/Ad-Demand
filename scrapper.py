@@ -17,11 +17,14 @@ a_html = a.html()
 a_soup = soup(a_html,'html.parser')
 a_pop =  a_soup.find_all(id = 'Население')[0]
 #%%
+# For table 
 tab = a_pop.findNext(class_ = 'standard')
-
+# For Year
 year_row = tab.find_all(class_ = 'bright')[-1]
 year = year_row.find_all('th')[-2].text
-
+# For population count
 pop_row = tab.find_all(align = 'center')[-1]
 pop = pop_row.find_all('td')[-2].text
-pop_clean = pop.replace(u'\xa0',u'')
+
+# \xa0 is non-breaking space in Latin1 encoding
+pop_clean = pop.replace(u'\xa0',u'') 
