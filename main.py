@@ -74,4 +74,15 @@ for i in range(len(unique_cities)):
 
 plt.hist(train.iloc[:,17], np.arange(0.0,1.1,0.1),edgecolor = 'black',linewidth = 1.2)
 plt.xticks(np.arange(0.0,1.1,0.1))
+#%%
+cats_and_counts = train['parent_category_name'].value_counts()
+
+translated_cats = []
+for i in list(cats_and_counts.index):
+    translated_cats.append(translator.translate(i).text)
+
+
+
+cats_and_counts.plot('bar').set_xticklabels(translated_cats)
+
 
