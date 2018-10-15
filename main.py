@@ -6,7 +6,7 @@ Created on Sat Sep 14 12:39:59 2018
 @author: kneehit
 """
 
-#%%
+
 import numpy as np
 import pandas as pd
 import cv2
@@ -17,25 +17,25 @@ os.chdir('/home/kneehit/Data Science/Avito Ad Demand/Avito')
 import random
 import matplotlib.pyplot as plt 
 
-#%%
+
 periods_train = pd.read_csv('periods_train.csv',nrows = 10)
 periods_test = pd.read_csv('periods_test.csv',nrows = 10)
-#%%
+
 train = pd.read_csv('train.csv',nrows = 100)
 test = pd.read_csv('test.csv',nrows = 100)
 
-#%%
+
 train_active = pd.read_csv('train_active.csv',nrows = 100)
 test_active = pd.read_csv('test_active.csv',nrows = 100)
 
-#%%
+
 train_images_path = 'train/data/competition_files/train_jpg/'
 test_images_path = 'test/data/competition_files/test_jpg/'
 
 train_images = glob.glob(train_images_path +'*.jpg')
 test_images = glob.glob(test_images_path +'*.jpg')
 
-#%%
+
 translator = googletrans.Translator()
 def visualize_translated(num = random.randint(0,train.shape[0])):
 
@@ -62,7 +62,7 @@ def visualize_translated(num = random.randint(0,train.shape[0])):
         print('\nImage Missing')
 
 visualize_translated(21)
-#%%
+
 city_counts = train['city'].value_counts() 
 unique_cities = list(city_counts.index)
 
@@ -74,7 +74,7 @@ for i in range(len(unique_cities)):
 
 plt.hist(train.iloc[:,17], np.arange(0.0,1.1,0.1),edgecolor = 'black',linewidth = 1.2)
 plt.xticks(np.arange(0.0,1.1,0.1))
-#%%
+
 cats_and_counts = train['parent_category_name'].value_counts()
 
 translated_cats = []
