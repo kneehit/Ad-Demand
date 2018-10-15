@@ -36,9 +36,9 @@ train_images = glob.glob(train_images_path +'*.jpg')
 test_images = glob.glob(test_images_path +'*.jpg')
 
 #%%
-
+translator = googletrans.Translator()
 def visualize_translated(num = random.randint(0,train.shape[0])):
-    translator = googletrans.Translator()
+
     item_translated = {}
     item_translated['region'] = translator.translate(train.iloc[num,2]).text
     item_translated['city'] = translator.translate(train.iloc[num,3]).text
@@ -62,6 +62,15 @@ def visualize_translated(num = random.randint(0,train.shape[0])):
         print('\nImage Missing')
 
 visualize_translated(21)
+#%%
+city_counts = train['city'].value_counts() 
+unique_cities = list(city_counts.index)
+#%%
+cities_translated = {}
+
+for i in range(len(unique_cities)):
+    translated_city = translator.translate(unique_cities[i]).text
+    cities_translated.update({unique_cities[i]:translated_city})
 
 
 
