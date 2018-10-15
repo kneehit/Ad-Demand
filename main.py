@@ -15,7 +15,7 @@ import googletrans
 import glob
 os.chdir('/home/kneehit/Data Science/Avito Ad Demand/Avito')
 import random
-
+import matplotlib.pyplot as plt 
 
 #%%
 periods_train = pd.read_csv('periods_train.csv',nrows = 10)
@@ -65,12 +65,13 @@ visualize_translated(21)
 #%%
 city_counts = train['city'].value_counts() 
 unique_cities = list(city_counts.index)
-#%%
+
 cities_translated = {}
 
 for i in range(len(unique_cities)):
     translated_city = translator.translate(unique_cities[i]).text
     cities_translated.update({unique_cities[i]:translated_city})
 
-
+plt.hist(train.iloc[:,17], np.arange(0.0,1.1,0.1),edgecolor = 'black',linewidth = 1.2)
+plt.xticks(np.arange(0.0,1.1,0.1))
 
