@@ -6,7 +6,7 @@ Created on Sat Sep 14 12:39:59 2018
 @author: kneehit
 """
 
-
+#%%
 import numpy as np
 import pandas as pd
 import cv2
@@ -17,7 +17,7 @@ os.chdir('/home/kneehit/Data Science/Avito Ad Demand/Avito')
 import random
 import matplotlib.pyplot as plt 
 
-
+#%%
 periods_train = pd.read_csv('periods_train.csv',nrows = 10)
 periods_test = pd.read_csv('periods_test.csv',nrows = 10)
 
@@ -35,7 +35,7 @@ test_images_path = 'test/data/competition_files/test_jpg/'
 train_images = glob.glob(train_images_path +'*.jpg')
 test_images = glob.glob(test_images_path +'*.jpg')
 
-
+#%%
 translator = googletrans.Translator()
 def visualize_translated(num = random.randint(0,train.shape[0])):
 
@@ -62,7 +62,7 @@ def visualize_translated(num = random.randint(0,train.shape[0])):
         print('\nImage Missing')
 
 visualize_translated(21)
-
+#%%
 city_counts = train['city'].value_counts() 
 unique_cities = list(city_counts.index)
 
@@ -84,5 +84,17 @@ for i in list(cats_and_counts.index):
 
 
 cats_and_counts.plot('bar').set_xticklabels(translated_cats)
-
-
+#%%
+for j in range(len(cats_and_counts)):
+#    plt.subplot(2,1,j+1)
+    subset = train[train['parent_category_name'] == list(cats_and_counts.index)[j]]
+    
+    subset_cats = subset['category_name'].value_counts()
+    
+    translated_subcats = []
+    for i in list(subset_cats.index):
+        translated_subcats.append(translator.translate(i).text)
+        
+    subset_cats.plot('bar').set_xticklabels(translated_subcats)
+    plt.title('Parent Category: ' + translated_cats[j],fontsize = 20)
+    plt.show()
