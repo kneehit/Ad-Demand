@@ -9,5 +9,5 @@ Dataset: https://www.kaggle.com/c/avito-demand-prediction
 
 
 ## Work in Progress - (Currently working on Data Visualization and Web Scrapping for additional features)
-- [x] Web Scrapping
+- [x] Web Scrapping for city population
 - [ ] Data Visualization
