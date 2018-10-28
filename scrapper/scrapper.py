@@ -45,7 +45,8 @@ wiki.set_lang('ru')   # else gives incorrect results Eg. for 'Самара' gave
 #%%
 city_pop = pd.DataFrame(columns = ['city','popu_string'])
 #%%
-for ind in range(1334,len(unique_cities)):
+for ind in range(len(unique_cities)):
+#ind = 178
     city_name = unique_cities[ind]
     try:
 
@@ -53,9 +54,19 @@ for ind in range(1334,len(unique_cities)):
     
     except wiki.DisambiguationError:
         print('Disambiguation Error: Trying {} along with term city'.format(city_name))
-        page = wiki.page(city_name + ' город')  # city name + city
 
+        try:
 
+            page = wiki.page(city_name + ' город')  # city name + city
+        except wiki.DisambiguationError:
+            print('Disambiguation Error: Skipping city {}'.format(city_name))
+            continue
+        except wiki.PageError:
+            print('Page Error: Page for city {} Not Found !!!'.format(city_name))
+            temp = pd.DataFrame(data = {'city':[city_name],'popu_string':['NAN']}) # not np.NaN for data type consistency
+
+            city_pop = pd.concat((city_pop,temp),ignore_index = True)  
+            continue
     except wiki.PageError:
         temp = pd.DataFrame(data = {'city':[city_name],'popu_string':['NAN']}) # not np.NaN for data type consistency
         
@@ -86,5 +97,4 @@ for ind in range(1334,len(unique_cities)):
         temp = pd.DataFrame(data = {'city':[city_name],'popu_string':['NAN']}) # not np.NaN for data type consistency
         
         
-        city_pop = pd.concat((city_pop,temp),ignore_index = True)        
-        
+        city_pop = pd.concat((city_pop,temp),ignore_index = True)
