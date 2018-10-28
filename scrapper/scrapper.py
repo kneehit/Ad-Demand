@@ -58,11 +58,9 @@ for ind in range(len(unique_cities)):
         try:
 
             page = wiki.page(city_name + ' город')  # city name + city
-        except wiki.DisambiguationError:
-            print('Disambiguation Error: Skipping city {}'.format(city_name))
-            continue
-        except wiki.PageError:
-            print('Page Error: Page for city {} Not Found !!!'.format(city_name))
+        # If still not found then add NANs for population string and continue
+        except (wiki.DisambiguationError, wiki.PageError):     
+            print('Error: Page for city {} Not Found !!!'.format(city_name))
             temp = pd.DataFrame(data = {'city':[city_name],'popu_string':['NAN']}) # not np.NaN for data type consistency
 
             city_pop = pd.concat((city_pop,temp),ignore_index = True)  
@@ -98,3 +96,4 @@ for ind in range(len(unique_cities)):
         
         
         city_pop = pd.concat((city_pop,temp),ignore_index = True)
+#%%
