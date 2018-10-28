@@ -14,9 +14,9 @@ import numpy as np
 import pandas as pd
 import os
 #%%
-wiki.set_lang('ru')   # else gives incorrect results Eg. for 'Самара' gave 'PFC Krylia Sovetov Samara' not city but FC
-a = wiki.page('Самара')
-a_html = a.html()
+# wiki.set_lang('ru')   # else gives incorrect results Eg. for 'Самара' gave 'PFC Krylia Sovetov Samara' not city but FC
+# a = wiki.page('Самара')
+# a_html = a.html()
 
 #%% --------------------- Trial Script ----------------------
 # a_soup = soup(a_html,'html.parser')
