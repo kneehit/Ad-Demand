@@ -51,7 +51,7 @@ for ind in range(len(unique_cities)):
     try:
 
         page = wiki.page(city_name )  
-    
+    # If city name is ambiguous
     except wiki.DisambiguationError:
         print('Disambiguation Error: Trying {} along with term city'.format(city_name))
 
