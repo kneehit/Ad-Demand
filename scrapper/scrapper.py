@@ -62,7 +62,7 @@ for ind in range(len(unique_cities)):
         # NAN as string and not np.NaN for data type consistency in population column
         except (wiki.DisambiguationError, wiki.PageError):     
             print('Error: Page for city {} Not Found !!!'.format(city_name))
-            temp = pd.DataFrame(data = {'city':[city_name],'popu_string':['NAN']}) # not np.NaN for data type consistency
+            temp = pd.DataFrame(data = {'city':[city_name],'popu_string':['NAN']})
 
             city_pop = pd.concat((city_pop,temp),ignore_index = True)  
             continue
