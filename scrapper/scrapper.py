@@ -81,7 +81,7 @@ for ind in range(len(unique_cities)):
     
     
     try:
-    
+        # Find information box (usually situated at the top left side on wikipedia page)
         infobox = city_soup.find_all(class_ = 'infobox vcard')[0]
         
         pop = infobox.find_next(text = 'Население')
