@@ -87,6 +87,7 @@ for ind in range(len(unique_cities)):
         # Find the HTML element with text population (in Russian)
         pop = infobox.find_next(text = 'Население')
         
+        # Find the string actually containing population figure
         popu = pop.find_next('tr').find_next('span').text
         
         temp = pd.DataFrame(data = {'city':[city_name],'popu_string':[popu]})
