@@ -101,3 +101,8 @@ for ind in range(len(unique_cities)):
         city_pop = pd.concat((city_pop,temp),ignore_index = True)
 #%%
 city_pop.to_csv('Population Dirty.csv')
+#%%
+pop_wo_dup['popu_string'] = pop_wo_dup['popu_string'].str.split('[').str[0]
+pop_wo_dup['popu_string'] = pop_wo_dup['popu_string'].str.replace('\xa0','').str.replace(' ','')
+
+
