@@ -92,7 +92,7 @@ for ind in range(len(unique_cities)):
         
         temp = pd.DataFrame(data = {'city':[city_name],'popu_string':[popu]})
         
-        
+        # Concatenate temporary and main population data
         city_pop = pd.concat((city_pop,temp),ignore_index = True)
     except:
         temp = pd.DataFrame(data = {'city':[city_name],'popu_string':['NAN']}) # not np.NaN for data type consistency
