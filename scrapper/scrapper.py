@@ -104,13 +104,15 @@ city_pop.to_csv('Population Dirty.csv')
 #%%
 # Example of values in population column - '↗1 468 833[2] человека (2018)'
 # Split the string by '[' so that we get '↗1 468 833'
-pop_wo_dup['popu_string'] = pop_wo_dup['popu_string'].str.split('[').str[0]
+city_pop['popu_string'] = city_pop['popu_string'].str.split('[').str[0]
 
 # The space in the string is actually \xa0 which is non-breaking space in Latin1 encoding
 # Some values also have the space character ' ' as well.
 # Therefore we replace both of them by ''
-pop_wo_dup['popu_string'] = pop_wo_dup['popu_string'].str.replace('\xa0','').str.replace(' ','')
+city_pop['popu_string'] = city_pop['popu_string'].str.replace('\xa0','').str.replace(' ','')
 
-pop_wo_dup['popu_string'] = pop_wo_dup['popu_string'].str.extract('(\d+)')
-pop_wo_dup['popu_string'] = pd.to_numeric(pop_wo_dup['popu_string'])
+city_pop['popu_string'] = city_pop['popu_string'].str.extract('(\d+)')
+city_pop['popu_string'] = pd.to_numeric(city_pop['popu_string'])
+
+city_pop.to_csv('Population Clean.csv')
 
