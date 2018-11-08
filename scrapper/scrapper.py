@@ -111,4 +111,6 @@ pop_wo_dup['popu_string'] = pop_wo_dup['popu_string'].str.split('[').str[0]
 # Therefore we replace both of them by ''
 pop_wo_dup['popu_string'] = pop_wo_dup['popu_string'].str.replace('\xa0','').str.replace(' ','')
 
+pop_wo_dup['popu_string'] = pop_wo_dup['popu_string'].str.extract('(\d+)')
+pop_wo_dup['popu_string'] = pd.to_numeric(pop_wo_dup['popu_string'])
 
