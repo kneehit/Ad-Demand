@@ -102,6 +102,8 @@ for ind in range(len(unique_cities)):
 #%%
 city_pop.to_csv('Population Dirty.csv')
 #%%
+# Example of values in population column - '↗1 468 833[2] человека (2018)'
+# Split the string by '[' so that we get '↗1 468 833'
 pop_wo_dup['popu_string'] = pop_wo_dup['popu_string'].str.split('[').str[0]
 pop_wo_dup['popu_string'] = pop_wo_dup['popu_string'].str.replace('\xa0','').str.replace(' ','')
 
