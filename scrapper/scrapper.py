@@ -113,9 +113,11 @@ city_pop['popu_string'] = city_pop['popu_string'].str.split('[').str[0]
 city_pop['popu_string'] = city_pop['popu_string'].str.replace('\xa0','').str.replace(' ','')
 # Now most of the values look like this '↗1468833'
 
+# We could simpy drop the first character (arrow) but since few values in our data are different from that. Example - '707408чел.(1января2018)'
 # To extract the population count we will use the regex for digits - '\d'
 city_pop['popu_string'] = city_pop['popu_string'].str.extract('(\d+)')
-# 
+
+# Convert the string column to numeric 
 city_pop['popu_string'] = pd.to_numeric(city_pop['popu_string'])
 
 city_pop.to_csv('Population Clean.csv')
