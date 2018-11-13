@@ -102,5 +102,6 @@ for j in range(len(cats_and_counts)):
 #%%
 pop = pd.read_csv('Population Clean.csv')
 pop.columns = ['city','popu_count']
+# Replace nan by average population count
 pop = pop.fillna(np.round(np.mean(pop['popu_count'])))
 train['population'] = train['city'].map(pop.set_index('city')['popu_count'])
