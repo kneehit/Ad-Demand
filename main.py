@@ -98,3 +98,9 @@ for j in range(len(cats_and_counts)):
     subset_cats.plot('bar').set_xticklabels(translated_subcats)
     plt.title('Parent Category: ' + translated_cats[j],fontsize = 20)
     plt.show()
+ 
+#%%
+pop = pd.read_csv('Population Clean.csv')
+pop.columns = ['city','popu_count']
+pop = pop.fillna(np.round(np.mean(pop['popu_count'])))
+train['population'] = train['city'].map(pop.set_index('city')['popu_count'])
