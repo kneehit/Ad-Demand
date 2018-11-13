@@ -104,4 +104,5 @@ pop = pd.read_csv('Population Clean.csv')
 pop.columns = ['city','popu_count']
 # Replace nan by average population count
 pop = pop.fillna(np.round(np.mean(pop['popu_count'])))
+# insert population column which is based on city names from train and pop dataset
 train['population'] = train['city'].map(pop.set_index('city')['popu_count'])
