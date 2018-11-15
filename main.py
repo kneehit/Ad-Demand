@@ -13,7 +13,6 @@ import cv2
 import os
 import googletrans
 import glob
-os.chdir('/home/kneehit/Data Science/Avito Ad Demand/Avito')
 import random
 import matplotlib.pyplot as plt 
 
