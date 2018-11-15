@@ -26,7 +26,6 @@ wiki.set_lang('ru')   # else gives incorrect results Eg. for 'Самара' gave
 city_pop = pd.DataFrame(columns = ['city','popu_string'])
 #%%
 for ind in range(len(unique_cities)):
-#ind = 178
     city_name = unique_cities[ind]
     try:
 
@@ -70,6 +69,7 @@ for ind in range(len(unique_cities)):
         # Find the string actually containing population figure
         popu = pop.find_next('tr').find_next('span').text
         
+        # Create a row
         temp = pd.DataFrame(data = {'city':[city_name],'popu_string':[popu]})
         
         # Concatenate temporary and main population data
@@ -80,6 +80,7 @@ for ind in range(len(unique_cities)):
         
         city_pop = pd.concat((city_pop,temp),ignore_index = True)
 #%%
+# Write CSV
 city_pop.to_csv('Population Dirty.csv')
 #%%
 # Example of values in population column - '↗1 468 833[2] человека (2018)'
