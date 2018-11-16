@@ -15,6 +15,7 @@ import googletrans
 import glob
 import random
 import matplotlib.pyplot as plt 
+import pprint
 
 #%%
 periods_train = pd.read_csv('periods_train.csv',nrows = 10)
@@ -61,7 +62,10 @@ def visualize_translated(num):
     else:
         print('\nImage Missing')
 
-visualize_translated(21)
+        
+for i in range(0,4):
+    num = random.randint(0,train.shape[0])
+    visualize_translated(num)
 #%%
 city_counts = train['city'].value_counts() 
 unique_cities = list(city_counts.index)
