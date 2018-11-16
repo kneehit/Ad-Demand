@@ -11,6 +11,7 @@ Dataset: https://www.kaggle.com/c/avito-demand-prediction
 ## Work in Progress 
 - [x] Web Scrapping Population of Cities from Wikipedia
 - [x] Data Visualization
+- [ ] Data Cleaning - Esp. description column
 - [ ] Feature Engineering
 - [ ] Data Modelling
 - [ ] Evaluation
