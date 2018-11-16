@@ -37,7 +37,7 @@ test_images = glob.glob(test_images_path +'*.jpg')
 #%%
 # Function to visualize ad image and the related information
 translator = googletrans.Translator()
-def visualize_translated(num = random.randint(0,train.shape[0])):
+def visualize_translated(num):
 
     item_translated = {}
     item_translated['region'] = translator.translate(train.iloc[num,2]).text
@@ -48,14 +48,14 @@ def visualize_translated(num = random.randint(0,train.shape[0])):
     item_translated['param_2'] = translator.translate(train.iloc[num,7]).text if not pd.isna(train.iloc[num,7]) else 'NA'
     item_translated['param_3'] = translator.translate(train.iloc[num,8]).text if not pd.isna(train.iloc[num,8]) else 'NA'
     item_translated['title']= translator.translate(train.iloc[num,9]).text
-    item_translated['desc'] = translator.translate(train.iloc[num,10]).text
-    print(item_translated)
+    item_translated['desc'] = translator.translate(train.iloc[num,10]).text if not pd.isna(train.iloc[num,10]) else 'NA'
     
+    pprint.pprint(item_translated)
     
     if not pd.isna(train.iloc[num,15]):
         image_path = train_images_path + train.iloc[num,15] + '.jpg'
-        a = cv2.imread(image_path)
-        cv2.imshow('',a)
+        img = cv2.imread(image_path)
+        cv2.imshow('Item {}'.format(num),img)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
     else:
