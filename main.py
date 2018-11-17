@@ -111,3 +111,17 @@ pop = pop.fillna(np.round(np.mean(pop['popu_count'])))
 # insert population column which is based on city names from train and pop dataset
 train['population'] = train['city'].map(pop.set_index('city')['popu_count'])
 test['population'] = test['city'].map(pop.set_index('city')['popu_count'])
+
+#%%
+# Percent of missing values in columns 
+train.isna().sum()*100/train.shape[0]
+# Param_2 and Param_3 have 43% and 57% missing values respectively.
+
+#%%
+train['description'][random.randint(0,train.shape[0])]
+# After going through many (200+) descriptions, following characters appear in the dataset which should be removed/treated separately.
+# \n, -, nan, Б/у, /\n, ------------------, == ,*************, «Победа», №13, punctuations, ➋, ☎
+# •, English proper nouns, "", 
+
+
+
