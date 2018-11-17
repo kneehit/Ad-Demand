@@ -119,8 +119,9 @@ train.isna().sum()*100/train.shape[0]
 
 #%%
 train['description'][random.randint(0,train.shape[0])]
-# After going through many (200+) descriptions, following characters appear in the dataset which should be removed/treated separately.
-# \n, -, nan, Б/у, /\n, ------------------, == ,*************, «Победа», №13, punctuations, ➋, ☎
+# After going through many (200+) descriptions, following characters appear in the dataset 
+# These should be removed/treated separately.
+# \n, -, nan, Б/у, /\n, ------------------, == ,*************, «Победа», №13, punctuations, ➋, ☎,
 # •, English proper nouns, "", 
 
 
