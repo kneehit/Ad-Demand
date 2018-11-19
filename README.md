@@ -9,6 +9,8 @@ Dataset: https://www.kaggle.com/c/avito-demand-prediction
 
 Few of the images from training set and their translated text from Russian can be found below:
 
+![alt text](images/train-images.gif)
+
 
 ## Work in Progress 
 - [x] Web Scrapping Population of Cities from Wikipedia
