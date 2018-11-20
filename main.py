@@ -121,6 +121,7 @@ train.isna().sum()*100/train.shape[0]
 train.loc[:,['param_1','param_2','param_3']] = train.loc[:,['param_1','param_2','param_3']].fillna('')
 train.loc[:,'description'] = train.loc[:,'description'].fillna('')
 
+# Replace nans in price column by average price of the corresponding category
 train['price'] = train.loc[:,['category_name','price']].groupby('category_name').transform(lambda x: x.fillna(x.mean()))
 
 
