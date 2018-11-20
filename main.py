@@ -116,6 +116,11 @@ test['population'] = test['city'].map(pop.set_index('city')['popu_count'])
 # Percent of missing values in columns 
 train.isna().sum()*100/train.shape[0]
 # Param_2 and Param_3 have 43% and 57% missing values respectively.
+#%%
+train.loc[:,['param_1','param_2','param_3']] = train.loc[:,['param_1','param_2','param_3']].fillna('')
+train.loc[:,'description'] = train.loc[:,'description'].fillna('')
+
+
 
 #%%
 train['description'][random.randint(0,train.shape[0])]
