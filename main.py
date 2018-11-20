@@ -117,6 +117,7 @@ test['population'] = test['city'].map(pop.set_index('city')['popu_count'])
 train.isna().sum()*100/train.shape[0]
 # Param_2 and Param_3 have 43% and 57% missing values respectively.
 #%%
+# Replace nans by with empty string
 train.loc[:,['param_1','param_2','param_3']] = train.loc[:,['param_1','param_2','param_3']].fillna('')
 train.loc[:,'description'] = train.loc[:,'description'].fillna('')
 
