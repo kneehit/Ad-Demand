@@ -125,6 +125,7 @@ train.loc[:,'description'] = train.loc[:,'description'].fillna('')
 train['price'] = train.loc[:,['category_name','price']].groupby('category_name').transform(lambda x: x.fillna(x.mean()))
 
 #%%
+# Combine params since param_2 and param_3 have about 50% empty strings
 train['param'] = train['param_1'] + ' ' + train['param_2'] + ' ' + train['param_3']
 train['param'] = train['param'].str.strip()
 train['param'] = train['param'].str.replace('  ',' ')
