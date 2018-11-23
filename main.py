@@ -124,6 +124,8 @@ train.loc[:,'description'] = train.loc[:,'description'].fillna('')
 # Replace nans in price column by average price of the corresponding category
 train['price'] = train.loc[:,['category_name','price']].groupby('category_name').transform(lambda x: x.fillna(x.mean()))
 
+#%%
+train['param'] = train['param_1'] + ' ' + train['param_2'] + ' ' + train['param_3']
 
 #%%
 train['description'][random.randint(0,train.shape[0])]
