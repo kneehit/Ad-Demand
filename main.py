@@ -126,7 +126,7 @@ train['price'] = train.loc[:,['category_name','price']].groupby('category_name')
 
 #%%
 train['param'] = train['param_1'] + ' ' + train['param_2'] + ' ' + train['param_3']
-
+train['param'] = train['param'].str.strip()
 #%%
 train['description'][random.randint(0,train.shape[0])]
 # After going through many (200+) descriptions, following characters appear in the dataset 
