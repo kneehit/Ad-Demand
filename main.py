@@ -129,6 +129,7 @@ train['price'] = train.loc[:,['category_name','price']].groupby('category_name')
 train['param'] = train['param_1'] + ' ' + train['param_2'] + ' ' + train['param_3']
 # Remove white spaces from start and end
 train['param'] = train['param'].str.strip()
+# Replace double white spaces by single white space. 
 train['param'] = train['param'].str.replace('  ',' ')
 #%%
 train['description'][random.randint(0,train.shape[0])]
