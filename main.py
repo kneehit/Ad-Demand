@@ -65,7 +65,7 @@ def visualize_translated(num):
     else:
         print('\nImage Missing')
 
-        
+# Display 4 images and their translated information       
 for i in range(0,4):
     num = random.randint(0,train.shape[0])
     visualize_translated(num)
