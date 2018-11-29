@@ -41,6 +41,7 @@ translator = googletrans.Translator()
 def visualize_translated(num):
 
     item_translated = {}
+    # Translate relevant columns from Russian to English
     item_translated['region'] = translator.translate(train.iloc[num,2]).text
     item_translated['city'] = translator.translate(train.iloc[num,3]).text
     item_translated['parent_cat'] = translator.translate(train.iloc[num,4]).text
@@ -51,8 +52,10 @@ def visualize_translated(num):
     item_translated['title']= translator.translate(train.iloc[num,9]).text
     item_translated['desc'] = translator.translate(train.iloc[num,10]).text if not pd.isna(train.iloc[num,10]) else 'NA'
     
+    # pprint so that it is formatted appropriately in the output
     pprint.pprint(item_translated)
     
+    # Display Image
     if not pd.isna(train.iloc[num,15]):
         image_path = train_images_path + train.iloc[num,15] + '.jpg'
         img = cv2.imread(image_path)
