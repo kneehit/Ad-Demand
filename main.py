@@ -109,6 +109,7 @@ for j in range(len(cats_and_counts)):
     plt.show()
  
 #%%
+# Read the city population scrapped from wikipedia 
 pop = pd.read_csv('Population Clean.csv')
 pop.columns = ['city','popu_count']
 # Replace nan by average population count
