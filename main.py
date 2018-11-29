@@ -79,6 +79,8 @@ for i in range(len(unique_cities)):
     translated_city = translator.translate(unique_cities[i]).text
     cities_translated.update({unique_cities[i]:translated_city})
 
+# Parent category plots
+    
 plt.hist(train.iloc[:,17], np.arange(0.0,1.1,0.1),edgecolor = 'black',linewidth = 1.2)
 plt.xticks(np.arange(0.0,1.1,0.1))
 
