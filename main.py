@@ -18,6 +18,7 @@ import matplotlib.pyplot as plt
 import pprint
 
 #%%
+# Load all CSVs
 periods_train = pd.read_csv('periods_train.csv',nrows = 10)
 periods_test = pd.read_csv('periods_test.csv',nrows = 10)
 
