@@ -104,6 +104,6 @@ city_pop['popu_string'] = city_pop['popu_string'].str.extract('(\d+)')
 # Convert the string column to numeric 
 city_pop['popu_string'] = pd.to_numeric(city_pop['popu_string'])
 
-# Write csv
+# Write the cleaned version of population csv
 city_pop.to_csv('Population Clean.csv')
 
