@@ -36,10 +36,11 @@ for ind in range(len(unique_cities)):
         print('Disambiguation Error: Trying {} along with term city'.format(city_name))
 
         try:
-     
             page = wiki.page(city_name + ' город')  # city name + city (город = city in russian)
+
         # If still not found then add NANs for population string and continue
         # NAN as string and not np.NaN for data type consistency in population column
+
         except (wiki.DisambiguationError, wiki.PageError):     
             print('Error: Page for city {} Not Found !!!'.format(city_name))
             temp = pd.DataFrame(data = {'city':[city_name],'popu_string':['NAN']})
