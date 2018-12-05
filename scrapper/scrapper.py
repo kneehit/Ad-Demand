@@ -27,6 +27,7 @@ city_pop = pd.DataFrame(columns = ['city','popu_string'])
 #%%
 for ind in range(len(unique_cities)):
     city_name = unique_cities[ind]
+    # Try Catch block to avoid exceptions if the city name is ambiguous with some other term
     try:
 
         page = wiki.page(city_name )  
