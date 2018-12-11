@@ -155,3 +155,4 @@ words = words.split()
 result = pd.DataFrame(Counter(words).most_common(top_N),
                     columns=['Word', 'Frequency']).set_index('Word')
 
+print(result)
