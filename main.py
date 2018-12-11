@@ -17,7 +17,7 @@ import glob
 import random
 import matplotlib.pyplot as plt 
 import pprint
-
+from collections import Counter
 #%%
 # Load all CSVs
 periods_train = pd.read_csv('periods_train.csv',nrows = 10)
@@ -145,6 +145,11 @@ train['description'][random.randint(0,train.shape[0])]
 # These should be removed/treated separately.
 # \n, -, nan, Б/у, /\n, ------------------, == ,*************, «Победа», №13, punctuations, ➋, ☎,
 # •, English proper nouns, "", 
+
+#%%
+top_N = 100
+
+words = desc.str.cat(sep=' ')
 
 
 
