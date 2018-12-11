@@ -150,6 +150,7 @@ train['description'][random.randint(0,train.shape[0])]
 top_N = 100
 
 words = desc.str.cat(sep=' ')
+words = words.split()
 
 
 
