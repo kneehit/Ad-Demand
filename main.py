@@ -146,7 +146,7 @@ train['description'][random.randint(0,train.shape[0])]
 # \n, -, nan, Б/у, /\n, ------------------, == ,*************, «Победа», №13, punctuations, ➋, ☎,
 # •, English proper nouns, "", 
 
-#%%
+#%% Most frequent words
 top_N = 100
 
 words = desc.str.cat(sep=' ')
