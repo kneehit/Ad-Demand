@@ -18,5 +18,5 @@ Few of the images from training set and their translated text from Russian can b
 - [ ] Data Cleaning - Esp. description column
 - [ ] Feature Engineering
 - [ ] Extract Image Features using CNN architecture(s) 
-- [ ] Data Modelling
-- [ ] Evaluation
+- [ ] Build the neural network architecture 
+- [ ] Evaluate on the Test Dataset
