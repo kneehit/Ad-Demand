@@ -17,5 +17,6 @@ Few of the images from training set and their translated text from Russian can b
 - [x] Data Visualization
 - [ ] Data Cleaning - Esp. description column
 - [ ] Feature Engineering
+- [ ] Extract Image Features using CNN architecture(s) 
 - [ ] Data Modelling
 - [ ] Evaluation
