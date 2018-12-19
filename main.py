@@ -149,7 +149,7 @@ train['description'][random.randint(0,train.shape[0])]
 #%% Most frequent words
 top_N = 100
 
-words = desc.str.cat(sep=' ')
+words = train['description'].str.cat(sep=' ')
 words = words.split()
 
 result = pd.DataFrame(Counter(words).most_common(top_N),
