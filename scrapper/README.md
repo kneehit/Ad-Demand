@@ -7,5 +7,6 @@ All of the population counts are extracted from Russian Wikipedia site since all
 
 ## Workflow
 1. Search for the city name on Russian Wikipedia
+2. Locate the infobox element
 
 
