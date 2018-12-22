@@ -6,5 +6,5 @@ That is why I decided to scrap data from Wikipedia.<br>
 All of the population counts are extracted from Russian Wikipedia site since all the cities don't have a page on the English Wikipedia website.<br>
 
 ## Workflow
- 
+
 
