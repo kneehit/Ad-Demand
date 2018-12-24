@@ -6,7 +6,7 @@ That is why I decided to scrap data from Wikipedia.<br>
 All of the population counts are extracted from Russian Wikipedia site since all the cities don't have a page on the English Wikipedia website.<br>
 
 ## Workflow
-1. Search for the city name on Russian Wikipedia
-2. Locate the infobox element
-3. Extract the population string within the infobox
+1. Search for the city name on Russian Wikipedia.
+2. Locate the infobox element.
+3. Extract the population string within the infobox.
 
