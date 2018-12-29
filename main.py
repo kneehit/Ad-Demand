@@ -149,6 +149,7 @@ chars_to_replace.extend(list(string.punctuation))
 chars_to_replace.extend(['¹', '²', '³', '½', '⅓', '¼', '⅕', '⅙', '⅐', '⅛', '⅑', '⅒', '⅔', '⅖', '¾', '⅗', '⅜', '⅘', '⅚', '⅝', '⅞'])
 chars_to_replace.extend(['⓵','⓶','⓷','⓸','⓹','⓺','⓻','⓼','⓽','⓾'])
 chars_to_replace.extend(['⒈','⒉', '⒊', '⒋', '⒌', '⒍', '⒎', '⒏', '⒐','⒑'])
+chars_to_replace.extend(['Ⓞ','①','②','③','④','⑤','⑥','⑦','⑧','⑨','⑩'])
 
 #%% Most frequent words
 top_N = 100
