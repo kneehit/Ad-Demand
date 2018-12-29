@@ -146,6 +146,7 @@ train['description'][random.randint(0,train.shape[0])]
 # These should be removed/treated separately.
 chars_to_replace = ['/\n','№','Б/у','\n','☎','✔','✘','☛','☚','•','«','»']
 chars_to_replace.extend(list(string.punctuation))
+chars_to_replace.extend(['¹', '²', '³', '½', '⅓', '¼', '⅕', '⅙', '⅐', '⅛', '⅑', '⅒', '⅔', '⅖', '¾', '⅗', '⅜', '⅘', '⅚', '⅝', '⅞'])
 
 #%% Most frequent words
 top_N = 100
