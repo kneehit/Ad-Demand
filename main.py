@@ -150,6 +150,7 @@ chars_to_replace.extend(['¹', '²', '³', '½', '⅓', '¼', '⅕', '⅙', '⅐
 chars_to_replace.extend(['⓵','⓶','⓷','⓸','⓹','⓺','⓻','⓼','⓽','⓾'])
 chars_to_replace.extend(['⒈','⒉', '⒊', '⒋', '⒌', '⒍', '⒎', '⒏', '⒐','⒑'])
 chars_to_replace.extend(['Ⓞ','①','②','③','④','⑤','⑥','⑦','⑧','⑨','⑩'])
+chars_to_replace.extend(['⓪', '➀', '➁', '➂', '➃', '➄', '➅', '➆', '➇', '➈', '➉'])
 
 #%% Most frequent words
 top_N = 100
