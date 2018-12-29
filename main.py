@@ -17,6 +17,7 @@ import glob
 import random
 import matplotlib.pyplot as plt 
 import pprint
+import string
 from collections import Counter
 #%%
 # Load all CSVs
@@ -144,7 +145,7 @@ train['description'][random.randint(0,train.shape[0])]
 # After going through many (200+) descriptions, following characters appear in the dataset 
 # These should be removed/treated separately.
 chars_to_replace = ['/\n','№','Б/у','\n','☎','✔','✘','☛','☚','•','«','»']
-
+chars_to_replace.extend(list(string.punctuation))
 
 #%% Most frequent words
 top_N = 100
