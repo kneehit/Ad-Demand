@@ -143,8 +143,7 @@ train['param'] = train['param'].str.replace('  ',' ')
 train['description'][random.randint(0,train.shape[0])]
 # After going through many (200+) descriptions, following characters appear in the dataset 
 # These should be removed/treated separately.
-# \n, -, nan, Б/у, /\n, ------------------, == ,*************, «Победа», №13, punctuations, ➋, ☎,
-# •, English proper nouns, "", 
+
 
 #%% Most frequent words
 top_N = 100
