@@ -152,13 +152,4 @@ chars_to_replace.extend(['⒈','⒉', '⒊', '⒋', '⒌', '⒍', '⒎', '⒏', 
 chars_to_replace.extend(['Ⓞ','①','②','③','④','⑤','⑥','⑦','⑧','⑨','⑩'])
 chars_to_replace.extend(['⓪', '➀', '➁', '➂', '➃', '➄', '➅', '➆', '➇', '➈', '➉'])
 
-#%% Most frequent words
-top_N = 100
 
-words = train['description'].str.cat(sep=' ')
-words = words.split()
-
-result = pd.DataFrame(Counter(words).most_common(top_N),
-                    columns=['Word', 'Frequency']).set_index('Word')
-
-print(result)
