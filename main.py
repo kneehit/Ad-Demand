@@ -147,6 +147,7 @@ train['description'][random.randint(0,train.shape[0])]
 chars_to_replace = ['/\n','№','Б/у','\n','☎','✔','✘','☛','☚','•','«','»']
 # List of punctuation marks
 chars_to_replace.extend(list(string.punctuation))
+# List of commonly occuring fractions
 chars_to_replace.extend(['¹', '²', '³', '½', '⅓', '¼', '⅕', '⅙', '⅐', '⅛', '⅑', '⅒', '⅔', '⅖', '¾', '⅗', '⅜', '⅘', '⅚', '⅝', '⅞'])
 # Numbers can occur in various forms in the item description.
 chars_to_replace.extend(['⓵','⓶','⓷','⓸','⓹','⓺','⓻','⓼','⓽','⓾'])
