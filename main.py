@@ -157,5 +157,6 @@ chars_to_replace.extend(['⓪', '➀', '➁', '➂', '➃', '➄', '➅', '➆',
 chars_to_replace.extend(['⓿', '❶', '❷', '❸', '❹', '❺', '❻', '❼', '❽', '❾', '❿'])
 chars_to_replace.extend(['➊', '➋', '➌', '➍', '➎', '➏', '➐', '➑', '➒', '➓' ])         
 chars_to_replace.extend(['⑴', '⑵', '⑶', '⑷', '⑸', '⑹', '⑺', '⑻', '⑼', '⑽'])
-chars_to_replace.extend(['¹', '²', '³', '½', '⅓', '¼', '⅕', '⅙', '⅐', '⅛', '⅑', '⅒', '⅔', '⅖', '¾', '⅗', '⅜', '⅘', '⅚', '⅝', '⅞'])
 
+for char in chars_to_replace:
+    train['description'] = train['description'].str.replace(char,'')
