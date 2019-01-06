@@ -15,7 +15,7 @@ Few of the images from training set and their translated text from Russian can b
 ## Work in Progress 
 - [x] Web Scrapping Population of Cities from Wikipedia
 - [x] Data Visualization
-- [ ] Data Cleaning - Esp. description column
+- [x] Data Cleaning - Esp. description column
 - [ ] Feature Engineering
 - [ ] Extract Image Features using CNN architecture(s) 
 - [ ] Build the neural network architecture 
