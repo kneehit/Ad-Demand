@@ -125,6 +125,7 @@ test['population'] = test['city'].map(pop.set_index('city')['popu_count'])
 # Percent of missing values in columns 
 train.isna().sum()*100/train.shape[0]
 # Param_2 and Param_3 have 43% and 57% missing values respectively.
+
 #%%
 # Replace nans by with empty string
 train.loc[:,['param_1','param_2','param_3']] = train.loc[:,['param_1','param_2','param_3']].fillna('')
@@ -140,6 +141,7 @@ train['param'] = train['param_1'] + ' ' + train['param_2'] + ' ' + train['param_
 train['param'] = train['param'].str.strip()
 # Replace double white spaces by single white space. 
 train['param'] = train['param'].str.replace('  ',' ')
+
 #%%
 train['description'][random.randint(0,train.shape[0])]
 # After going through many (200+) descriptions, following characters appear in the dataset 
