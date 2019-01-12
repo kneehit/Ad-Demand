@@ -19,7 +19,8 @@ import matplotlib.pyplot as plt
 import pprint
 import string
 from collections import Counter
-#%%
+
+
 # Load all CSV files
 periods_train = pd.read_csv('periods_train.csv',nrows = 10)
 periods_test = pd.read_csv('periods_test.csv',nrows = 10)
@@ -38,7 +39,7 @@ test_images_path = 'test/data/competition_files/test_jpg/'
 train_images = glob.glob(train_images_path +'*.jpg')
 test_images = glob.glob(test_images_path +'*.jpg')
 
-#%%
+
 # Function to visualize ad image and the related information
 translator = googletrans.Translator()
 def visualize_translated(num):
@@ -96,7 +97,7 @@ for i in list(cats_and_counts.index):
 
 
 cats_and_counts.plot('bar').set_xticklabels(translated_cats)
-#%%
+
 for j in range(len(cats_and_counts)):
 #    plt.subplot(2,1,j+1)
     subset = train[train['parent_category_name'] == list(cats_and_counts.index)[j]]
@@ -111,7 +112,7 @@ for j in range(len(cats_and_counts)):
     plt.title('Parent Category: ' + translated_cats[j],fontsize = 20)
     plt.show()
  
-#%%
+
 # Read the city population scrapped from wikipedia 
 pop = pd.read_csv('Population Clean.csv')
 pop.columns = ['city','popu_count']
@@ -121,12 +122,12 @@ pop = pop.fillna(np.round(np.mean(pop['popu_count'])))
 train['population'] = train['city'].map(pop.set_index('city')['popu_count'])
 test['population'] = test['city'].map(pop.set_index('city')['popu_count'])
 
-#%%
+
 # Percent of missing values in columns 
 train.isna().sum()*100/train.shape[0]
 # Param_2 and Param_3 have 43% and 57% missing values respectively.
 
-#%%
+
 # Replace nans by with empty string
 train.loc[:,['param_1','param_2','param_3']] = train.loc[:,['param_1','param_2','param_3']].fillna('')
 train.loc[:,'description'] = train.loc[:,'description'].fillna('')
@@ -134,7 +135,7 @@ train.loc[:,'description'] = train.loc[:,'description'].fillna('')
 # Replace nans in price column by average price of the corresponding category
 train['price'] = train.loc[:,['category_name','price']].groupby('category_name').transform(lambda x: x.fillna(x.mean()))
 
-#%%
+
 # Combine params since param_2 and param_3 have about 50% empty strings
 train['param'] = train['param_1'] + ' ' + train['param_2'] + ' ' + train['param_3']
 # Remove white spaces from start and end
@@ -142,7 +143,7 @@ train['param'] = train['param'].str.strip()
 # Replace double white spaces by single white space. 
 train['param'] = train['param'].str.replace('  ',' ')
 
-#%%
+
 train['description'][random.randint(0,train.shape[0])]
 # After going through many (200+) descriptions, following characters appear in the dataset 
 # These should be removed/treated separately.
