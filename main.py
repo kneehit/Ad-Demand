@@ -20,7 +20,7 @@ import pprint
 import string
 from collections import Counter
 #%%
-# Load all CSVs
+# Load all CSV files
 periods_train = pd.read_csv('periods_train.csv',nrows = 10)
 periods_test = pd.read_csv('periods_test.csv',nrows = 10)
 
