@@ -159,5 +159,6 @@ chars_to_replace.extend(['⓿', '❶', '❷', '❸', '❹', '❺', '❻', '❼',
 chars_to_replace.extend(['➊', '➋', '➌', '➍', '➎', '➏', '➐', '➑', '➒', '➓' ])         
 chars_to_replace.extend(['⑴', '⑵', '⑶', '⑷', '⑸', '⑹', '⑺', '⑻', '⑼', '⑽'])
 
+# Remove the above characters in description column
 for char in chars_to_replace:
     train['description'] = train['description'].str.replace(char,'')
