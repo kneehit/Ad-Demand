@@ -10,5 +10,5 @@ All of the population counts are extracted from Russian Wikipedia site since all
 1. Search for the city name on Russian Wikipedia.
 2. Locate the infobox element.
 3. Extract the population string within the infobox.
-4. Append to the dataframe
+4. Append to the dataframe.
 
