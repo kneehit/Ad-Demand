@@ -19,4 +19,4 @@ Few of the images from training set and their translated text from Russian can b
 - [ ] Feature Engineering
 - [ ] Extract Image Features using CNN architecture(s) 
 - [ ] Build the neural network architecture 
-- [ ] Evaluate on the Test Dataset
+- [ ] Evaluate on the Test Dataset.
