@@ -83,7 +83,8 @@ for ind in range(len(unique_cities)):
 #%%
 # Write CSV
 city_pop.to_csv('Population Dirty.csv')
-#%%
+
+#%% CLEANING
 # Example of values in population column - '↗1 468 833[2] человека (2018)'
 # Split the string by '[' so that 
 city_pop['popu_string'] = city_pop['popu_string'].str.split('[').str[0]
