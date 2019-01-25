@@ -6,6 +6,7 @@ Created on Mon Sep 24 10:54:08 2018
 @author: kneehit
 """
 #%%
+# Loading the required libraries
 import wikipedia as wiki
 from bs4 import BeautifulSoup as soup
 import wikipedia as wiki
