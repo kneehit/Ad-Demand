@@ -16,6 +16,7 @@ import pandas as pd
 import os
 
 #%%
+# Load and extract unique city name from the train.csv
 train = pd.read_csv('train.csv')
 city_counts = train['city'].value_counts() 
 unique_cities = list(city_counts.index) # list of unique cities in the training data
