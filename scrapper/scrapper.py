@@ -21,10 +21,7 @@ train = pd.read_csv('train.csv')
 city_counts = train['city'].value_counts() 
 unique_cities = list(city_counts.index) # list of unique cities in the training data
 
-#%%
 wiki.set_lang('ru')   # else gives incorrect results Eg. for 'Самара' gave 'PFC Krylia Sovetov Samara' not city but football club
-
-#%%
 city_pop = pd.DataFrame(columns = ['city','popu_string'])
 #%%
 for ind in range(len(unique_cities)):
