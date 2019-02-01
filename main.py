@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sat Sep 14 12:39:59 2018
 
 @author: kneehit
 """
 
-#%%
+
 # Load Libraries
 import numpy as np
 import pandas as pd
