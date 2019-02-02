@@ -17,8 +17,6 @@ import random
 import matplotlib.pyplot as plt 
 import pprint
 import string
-from collections import Counter
-
 
 # Load all CSV files
 periods_train = pd.read_csv('periods_train.csv',nrows = 10)
