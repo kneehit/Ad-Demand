@@ -81,7 +81,7 @@ for ind in range(len(unique_cities)):
         
         city_pop = pd.concat((city_pop,temp),ignore_index = True)
 #%%
-# Write CSV
+# Write to CSV
 city_pop.to_csv('Population Dirty.csv')
 
 #%% CLEANING
