@@ -8,8 +8,8 @@ All of the population counts are extracted from Russian Wikipedia site since all
 
 ## Workflow
 1. Get list of unique city names from training data.
-1. Search for the city name on Russian Wikipedia.
-2. Locate the infobox element.
-3. Extract the population string within the infobox.
-4. Append to the dataframe.
+2. Search for the city name on Russian Wikipedia.
+3. Locate the infobox element.
+4. Extract the population string within the infobox.
+5. Append to the dataframe.
 
