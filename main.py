@@ -95,6 +95,7 @@ for i in list(cats_and_counts.index):
 
 cats_and_counts.plot('bar').set_xticklabels(translated_cats)
 
+# Make plots
 for j in range(len(cats_and_counts)):
 #    plt.subplot(2,1,j+1)
     subset = train[train['parent_category_name'] == list(cats_and_counts.index)[j]]
