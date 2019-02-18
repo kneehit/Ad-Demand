@@ -150,13 +150,13 @@ chars_to_replace.extend(list(string.punctuation))
 # List of commonly occuring fractions
 chars_to_replace.extend(['¹', '²', '³', '½', '⅓', '¼', '⅕', '⅙', '⅐', '⅛', '⅑', '⅒', '⅔', '⅖', '¾', '⅗', '⅜', '⅘', '⅚', '⅝', '⅞'])
 # Numbers can occur in various forms in the item description.
-# Symbols like ⒈ and ⑴ are single characters and hence will be replaced altogether.
 chars_to_replace.extend(['⓵','⓶','⓷','⓸','⓹','⓺','⓻','⓼','⓽','⓾'])
-chars_to_replace.extend(['⒈','⒉', '⒊', '⒋', '⒌', '⒍', '⒎', '⒏', '⒐','⒑'])
 chars_to_replace.extend(['Ⓞ','①','②','③','④','⑤','⑥','⑦','⑧','⑨','⑩'])
 chars_to_replace.extend(['⓪', '➀', '➁', '➂', '➃', '➄', '➅', '➆', '➇', '➈', '➉'])
 chars_to_replace.extend(['⓿', '❶', '❷', '❸', '❹', '❺', '❻', '❼', '❽', '❾', '❿'])
-chars_to_replace.extend(['➊', '➋', '➌', '➍', '➎', '➏', '➐', '➑', '➒', '➓' ])         
+chars_to_replace.extend(['➊', '➋', '➌', '➍', '➎', '➏', '➐', '➑', '➒', '➓' ])    
+# Symbols like ⒈ and ⑴ are single characters and hence will be replaced altogether.
+chars_to_replace.extend(['⒈','⒉', '⒊', '⒋', '⒌', '⒍', '⒎', '⒏', '⒐','⒑'])
 chars_to_replace.extend(['⑴', '⑵', '⑶', '⑷', '⑸', '⑹', '⑺', '⑻', '⑼', '⑽'])
 
 # Remove the above characters in description column
