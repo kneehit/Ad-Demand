@@ -35,7 +35,6 @@ test_images_path = 'test/data/competition_files/test_jpg/'
 train_images = glob.glob(train_images_path +'*.jpg')
 test_images = glob.glob(test_images_path +'*.jpg')
 
-
 # Function to visualize ad image and the related information
 translator = googletrans.Translator()
 def visualize_translated(num):
