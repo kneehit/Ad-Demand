@@ -69,7 +69,7 @@ def visualize_translated(num):
 for i in range(0,4):
     num = random.randint(0,train.shape[0])
     visualize_translated(num)
-#%%
+
 city_counts = train['city'].value_counts() 
 unique_cities = list(city_counts.index)
 
