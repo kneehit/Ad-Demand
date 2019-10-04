@@ -15,6 +15,7 @@ import numpy as np
 import pandas as pd
 import os
 
+
 #%%
 # Load and extract unique city name from the train.csv
 train = pd.read_csv('train.csv')
