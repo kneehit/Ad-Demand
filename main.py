@@ -23,7 +23,6 @@ periods_test = pd.read_csv('periods_test.csv',nrows = 10)
 train = pd.read_csv('train.csv',nrows = 100)
 test = pd.read_csv('test.csv',nrows = 100)
 
-
 train_active = pd.read_csv('train_active.csv',nrows = 100)
 test_active = pd.read_csv('test_active.csv',nrows = 100)
 
