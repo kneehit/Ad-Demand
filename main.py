@@ -36,6 +36,7 @@ test_images = glob.glob(test_images_path +'*.jpg')
 translator = googletrans.Translator()
 def visualize_translated(num):
 
+    
     item_translated = {}
     # Translate relevant columns from Russian to English
     item_translated['region'] = translator.translate(train.iloc[num,2]).text
