@@ -26,7 +26,6 @@ test = pd.read_csv('test.csv',nrows = 100)
 train_active = pd.read_csv('train_active.csv',nrows = 100)
 test_active = pd.read_csv('test_active.csv',nrows = 100)
 
-
 train_images_path = 'train/data/competition_files/train_jpg/'
 test_images_path = 'test/data/competition_files/test_jpg/'
 
