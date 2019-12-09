@@ -14,7 +14,6 @@ Few of the images from training set and their translated text from Russian are s
 ![alt text](images/train-images.gif)
 
 
-
 ## Work in Progress 
 - [x] Web Scrapping Population of Cities from Wikipedia
 - [x] Data Visualization
