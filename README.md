@@ -7,6 +7,7 @@ Dataset: https://www.kaggle.com/c/avito-demand-prediction
 1. This dataset contains multiple types of data - numeric, textual, images and time series. It will be interesting to learn how    to train a model to utilize features from such different types of data.
 2. The textual data is Russian (foreign to me) and will provide unique challenge during data exploration as well as modelling.
 
+
 Few of the images from training set and their translated text from Russian are shown below:
 
 ![alt text](images/train-images.gif)
