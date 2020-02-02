@@ -21,3 +21,4 @@ Few of the images from training set and their translated text from Russian are s
 - [ ] Extract Image Features using CNN architecture(s) 
 - [ ] Build the neural network architecture 
 - [ ] Evaluate on the Test Dataset
+
